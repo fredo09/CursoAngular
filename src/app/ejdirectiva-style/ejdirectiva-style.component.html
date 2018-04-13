@@ -1,0 +1,9 @@
+<hr>
+<p>
+  Ejemplo de <strong>Directiva Style</strong>
+</p>
+<h4>Escriba la puntuacion del Alumno</h4>
+<input type="number" class="form-control" [(ngModel)]="puntuacion">
+<hr>
+<h4 style="display:inline-block">Puntuacion Obtenido:&nbsp;</h4>
+<h4 style="display:inline-block" [ngStyle]="{color:setColor()}"><strong>{{ puntuacion }}</strong> </h4>

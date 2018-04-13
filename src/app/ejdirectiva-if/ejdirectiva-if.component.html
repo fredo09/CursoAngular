@@ -1,0 +1,24 @@
+<hr>
+<div class="container">
+  <p>
+    Ejemplos de
+    <strong>Directiva IF</strong>
+  </p>
+  <label for="">Nombre y Apellido</label>
+  <input type="text" value="" [(ngModel)]="nombre" class="form-control" placeholder="Escriba su nombre y Aoellido">
+  <button type="submit" class="btn btn-primary btn-lg" *ngIf="!nombre; else desactivado">Enviar</button>
+  <ng-template #desactivado>
+    <button type="submit" class="btn btn-primary">Enviar else</button>
+  </ng-template>
+  <hr>
+  <h1>Otro ejemplo de directivaIf</h1>
+  <h3>Cual es la capital de Mexico?</h3>
+  <input type="text" placeholder="Escriba aqui!" [(ngModel)]="capital" class="form-control">
+  <p *ngIf="!capital; else correcto">Complete la Pregunta!</p>
+  <ng-template #correcto>
+    <h4 *ngIf="setResultado(); else incorrecto">Correcto!! :)</h4>
+  </ng-template>
+  <ng-template #incorrecto>
+    <h4>Lo siento intenta de nuevo</h4>
+  </ng-template>
+</div>
